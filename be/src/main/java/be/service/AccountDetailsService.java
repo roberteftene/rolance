@@ -21,14 +21,9 @@ public class AccountDetailsService {
     @Autowired
     UserRepository userRepository;
 
-    public UserDetailsModel addDetails(UserDetailsModel userDetailsModel, long userId, Integer serviceId) {
+    public UserDetailsModel addDetails(UserDetailsModel userDetailsModel, long userId) {
         UserAccountModel userAccountModel = userRepository.findById(userId).get();
-        SubscriptionModel subscriptionModel = subscriptionRepository.findById(serviceId).get();
-
-        subscriptionModel.getUserDetailsModelList().add(userDetailsModel);
         userDetailsModel.setUserAccount(userAccountModel);
-        userDetailsModel.setSubscriptionModel(subscriptionModel);
-
         accountDetailsRepository.save(userDetailsModel);
         return userDetailsModel;
     }

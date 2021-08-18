@@ -15,12 +15,9 @@ function AccountDetailsPage() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [birthday, setBirthday] = useState("");
-  const [serviceName, setServiceName] = useState("");
-  const [serviceEmail, setServiceEmail] = useState("");
   const [servicePhone, setServicePhone] = useState("");
   const [serviceCity, setServiceCity] = useState("");
-  const [serviceStreet, setServiceStreet] = useState("");
-  const [serviceDescription, setServiceDescription] = useState("");
+  const [serviceCountry, setServiceCountry] = useState("");
   const [isServiceOwner, setIsServiceOwner] = useState(true);
   const [experience, setExperience] = useState("")
   const [skills, setSkills] = useState("")
@@ -44,42 +41,37 @@ function AccountDetailsPage() {
           firstName: firstName,
           lastName: lastName,
           birthday: birthday,
+          phone: servicePhone,
+          country: serviceCountry,
+          city: serviceCity,
+          experienceDescription: experience,
+          skills: skills
         },
         currentUser.token,
         currentUser.id,
-        1
       )
         .then(() => {
           history.push("/home");
         })
         .catch((err) => console.log(err.message));
     } else {
-      let container = document.getElementById("working-hours-container");
-      console.log(container.childNodes);
-      let isValid = true;
-      let validInputs = true;
-      //TODO: validate inputs
-      if (validInputs) {
-        let serviceAddress = serviceStreet;
-        let serviceCategory = document.querySelector(".serviceCategory").value;
-        let subscriptionType = document.querySelector(".subscriptionType")
-          .value;
-
-        AccountDetailsService.saveUserDetails(
-          {
-            firstName: firstName,
-            lastName: lastName,
-            birthday: birthday,
-          },
-          currentUser.token,
-          currentUser.id,
-          subscriptionType
-        )
-          .then(() => {
-            history.push("/home");
-          })
-          .catch((err) => console.log(err.message));
-      }
+      console.log("muie")
+      AccountDetailsService.saveUserDetails(
+        {
+          firstName: firstName,
+          lastName: lastName,
+          birthday: birthday,
+          phone: servicePhone,
+          country: serviceCountry,
+          city: serviceCity,
+        },
+        currentUser.token,
+        currentUser.id,
+      )
+        .then(() => {
+          history.push("/home");
+        })
+        .catch((err) => console.log(err.message));
     }
   };
 
@@ -157,8 +149,8 @@ function AccountDetailsPage() {
               <Form.Control
                 type="text"
                 placeholder="Introdu tara"
-                value={serviceStreet}
-                onChange={(e) => setServiceStreet(e.target.value)}
+                value={serviceCountry}
+                onChange={(e) => setServiceCountry(e.target.value)}
               />
             </Form.Group>
             

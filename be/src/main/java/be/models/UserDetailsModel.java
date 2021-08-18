@@ -23,6 +23,16 @@ public class UserDetailsModel {
     private String lastName;
     @Column(name = "birthday")
     private String birthday;
+    @Column(name = "phone")
+    private String phone;
+    @Column(name="country")
+    private String country;
+    @Column(name = "city")
+    private String city;
+    @Column(name = "experience")
+    private String experienceDescription;
+    @Column(name = "skills")
+    private String skills;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "useraccount_id", referencedColumnName = "id")
@@ -37,16 +47,35 @@ public class UserDetailsModel {
     public UserDetailsModel() {
     }
 
-    public UserDetailsModel(String firstName, String lastName, String birthday, int subscriptionId, int likedServiceId) {
+    public UserDetailsModel(String firstName, String lastName,String phone, String birthday, String country, String city) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthday = birthday;
+        this.phone = phone;
+        this.country = country;
+        this.city = city;
     }
 
-    public UserDetailsModel(String firstName, String lastName, String birthday, UserAccountModel userAccount, SubscriptionModel subscriptionModel) {
+    public UserDetailsModel(String firstName, String lastName,String phone, String birthday, String country, String city, String experienceDescription, String skills) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.phone = phone;
         this.birthday = birthday;
+        this.country = country;
+        this.city = city;
+        this.experienceDescription = experienceDescription;
+        this.skills = skills;
+    }
+
+    public UserDetailsModel(String firstName, String lastName,String phone, String birthday, String country, String city, String experienceDescription, String skills, UserAccountModel userAccount, SubscriptionModel subscriptionModel) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.birthday = birthday;
+        this.country = country;
+        this.city = city;
+        this.experienceDescription = experienceDescription;
+        this.skills = skills;
         this.userAccount = userAccount;
         this.subscriptionModel = subscriptionModel;
     }
