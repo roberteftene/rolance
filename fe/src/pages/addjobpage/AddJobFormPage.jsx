@@ -25,6 +25,7 @@ function AddJobFormPage() {
   const [jobPayment, setJobPayment] = useState("");
   const [jobCategory, setJobCategory] = useState("Dezvoltare Software");
   const [skills, setSkills] = useState("");
+  const [jobLocation, setJobLocation] = useState("");
   const [visitDate, setVisitDate] = useState("");
   const history = useHistory();
 
@@ -40,6 +41,7 @@ function AddJobFormPage() {
       const reqBody = {
         jobTitle: jobTitle,
         jobDescription: jobDescription,
+        jobLocation: jobLocation,
         startDate: visitDate,
         jobDuration: jobDuration,
         jobPayment: jobPayment,
@@ -93,6 +95,15 @@ function AddJobFormPage() {
                 placeholder="Descrie in cateva fraze ce constituie mai exact jobul pe care il postezi"
                 value={jobDescription}
                 onChange={(e) => setJobDescription(e.target.value)}
+              />
+            </Form.Group>
+            <Form.Group controlId="control control-reviewContent">
+              <Form.Label>Locatie job</Form.Label>
+              <Form.Control
+                as="textarea"
+                placeholder="Introduceti orasul unde se va desfasura jobul. Introduceti online in cazul respectiv. "
+                value={jobLocation}
+                onChange={(e) => setJobLocation(e.target.value)}
               />
             </Form.Group>
             <Form.Group controlId="control control-reviewVisit">
@@ -151,41 +162,7 @@ function AddJobFormPage() {
               <Form.Text className="text-muted">
                 Selectati categoria corespunzatoare pentru jobul introdus
               </Form.Text>
-              <Form.Control
-                as="select"
-                controlid="subscriptionType"
-                className="subscriptionType"
-                onChange={(e) => setJobCategory(e.target.value)}
-              >
-                <option value="Dezvoltare Software">Dezvoltare Software</option>
-                <option value="Agricultura">Agricultura</option>
-                <option value="Constructii">Constructii</option>
-                <option value="Service">Service</option>
-                <option value="Instalatii">Instalatii</option>
-                <option value="Amenajari">Amenajari</option>
-                <option value="Protectie si paza">Protectie si paza</option>
-                <option value="Menaj/Curatenie">Menaj/Curatenie</option>
-                <option value="Imobiliare">Imobiliare</option>
-                <option value="Logistica">Logistica</option>
-                <option value="Audit">Audit</option>
-                <option value="Financiar/Contabilitate">
-                  Financiar/Contabilitate
-                </option>
-                <option value="T Hardware">IT Hardware</option>
-                <option value="Suport IT">Suport IT</option>
-                <option value="Web Design">Web Design</option>
-                <option value="Telecomunicatii">Telecomunicatii</option>
-                <option value="Marketing">Marketing</option>
-                <option value="Copyrighting">Copyrighting</option>
-                <option value="Promoter">Promoter</option>
-                <option value="Managment">Managment</option>
-                <option value="Publicitate">Publicitate</option>
-                <option value="Juridic">Juridic</option>
-                <option value="Traduceri">Traduceri</option>
-                <option value="Fitness">Fitness</option>
-                <option value="Educatie">Educatie</option>
-                <option value="Altceva">Altceva</option>
-              </Form.Control>
+             \
             </Form.Group>
           </Form>
         </div>

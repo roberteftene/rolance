@@ -15,6 +15,13 @@ class JobService {
     );
   }
 
+  getJobsLocation() {
+    return axios.get(`${API_URL}job/find/locations`);
+  }
+
+  getJobsFiltered(reqBody) {
+    return axios.post(`${API_URL}job/find`, reqBody);
+  }
 }
 
 export default new JobService();

@@ -13,6 +13,7 @@ public class JobModel {
     @Column(name = "job_id")
     private Integer jobId;
     private String jobTitle;
+    private String jobLocation;
     private String jobDescription;
     private String startDate;
     private String jobDuration;
@@ -28,46 +29,47 @@ public class JobModel {
     public JobModel() {
     }
 
-    public JobModel(String jobTitle, String jobDescription, String startDate, String jobDuration, String jobPayment, String skills, String categorie, UserAccountModel userAccount) {
+    public JobModel(String jobTitle,String jobLocation, String jobDescription, String startDate, String jobDuration, String jobPayment, String skills, String categorie, UserAccountModel userAccount) {
         this.jobDescription = jobDescription;
         this.jobTitle = jobTitle;
         this.startDate = startDate;
         this.jobDuration = jobDuration;
         this.jobPayment = jobPayment;
         this.skills = skills;
+        this.jobLocation = jobLocation;
         this.categorie = categorie;
         this.userAccount = userAccount;
     }
 
-    public JobModel(String jobTitle,String jobDescription, String startDate, String jobDuration, String jobPayment, String skills, String categorie) {
+    public JobModel(String jobTitle,String jobLocation,String jobDescription, String startDate, String jobDuration, String jobPayment, String skills, String categorie) {
         this.jobDescription = jobDescription;
         this.jobTitle = jobTitle;
         this.startDate = startDate;
+        this.jobLocation = jobLocation;
         this.jobDuration = jobDuration;
         this.jobPayment = jobPayment;
         this.skills = skills;
         this.categorie = categorie;
     }
 
-    public JobModel(String jobTitle,String jobDescription, String jobPayment, String skills, String categorie) {
+    public JobModel(String jobTitle,String jobLocation,String jobDescription, String jobPayment, String skills, String categorie) {
         this.jobDescription = jobDescription;
         this.jobTitle = jobTitle;
+        this.jobLocation = jobLocation;
         this.jobPayment = jobPayment;
         this.skills = skills;
         this.categorie = categorie;
     }
 
-    public JobModel(String jobTitle,String jobDescription, String jobDuration, String jobPayment, String skills, String categorie) {
+    public JobModel(String jobTitle,String jobLocation,String jobDescription, String jobDuration, String jobPayment, String skills, String categorie) {
         this.jobDescription = jobDescription;
         this.jobTitle = jobTitle;
+        this.jobLocation = jobLocation;
         this.jobDuration = jobDuration;
         this.jobPayment = jobPayment;
         this.skills = skills;
         this.categorie = categorie;
     }
-
-
-    // titlu, descriere, start date optional, optional durata job, pret, skill uri necesare, categorie
 
 
 }

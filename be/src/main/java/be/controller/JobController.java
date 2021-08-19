@@ -1,10 +1,13 @@
 package be.controller;
 
 import be.models.JobModel;
+import be.payload.request.FilterRequestPayload;
 import be.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -19,5 +22,15 @@ public class JobController {
     @PreAuthorize("hasRole('BUSINESSOWNER') or hasRole('ADMIN')")
     public void addJob(@RequestBody JobModel jobModel, @PathVariable(name = "userId") long userId) {
         jobService.addJob(jobModel,userId);
+    }
+
+    @PostMapping("/find")
+    public List<JobModel> getFilteredJobs(@RequestBody FilterRequestPayload filterRequestPayload) {
+        return jobService.getFilteredJobs(filterRequestPayload);
+    }
+
+    @GetMapping("/find/locations")
+    public List<String> getJobsLocations() {
+        return jobService.jobLocations();
     }
 }
