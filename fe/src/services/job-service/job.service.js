@@ -22,6 +22,22 @@ class JobService {
   getJobsFiltered(reqBody) {
     return axios.post(`${API_URL}job/find`, reqBody);
   }
+
+  getJobById(jobId) {
+    return axios.get(`${API_URL}job/${jobId}`);
+  }
+
+  applyToJob(reqBody) {
+    return axios.post(`${API_URL}job/apply`, reqBody);
+  }
+
+  getApplicants(jobId) {
+    return axios.get(`${API_URL}job/applicants/${jobId}`);
+  }
+
+  getJobsApplied(userId) {
+    return axios.get(`${API_URL}job/jobsApplied/${userId}`);
+  }
 }
 
 export default new JobService();

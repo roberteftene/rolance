@@ -129,4 +129,12 @@ public class JobService {
 
         return filteredJobs;
     }
+
+    public JobModel getJobById(Integer jobId) {
+        return jobRepository.findById(jobId).get();
+    }
+
+    public void joinJob(Long userId, Integer jobId) {
+
+    }
 }

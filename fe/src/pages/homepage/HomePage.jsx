@@ -79,7 +79,7 @@ export default class Home extends Component {
   }
 
   render() {
-    let gridArray = this.businessesArrayToGridArray(3);
+    let gridArray = this.businessesArrayToGridArray(2);
     return (
       <div className="container-homepage-big">
         <div className="homePage-container">

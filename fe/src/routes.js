@@ -3,6 +3,7 @@ import SideBarMenu from "./components/sidebar-menu/SideBarMenu";
 import AccountDetailsPage from "./pages/accountdetailspage/AccountDetailsPage";
 import AddJobFormPage from "./pages/addjobpage/AddJobFormPage";
 import Home from "./pages/homepage/HomePage";
+import JobPage from "./pages/jobpage/JobPage";
 import LandingPage from "./pages/landingpage/LandingPage";
 import LoginPage from "./pages/loginpage/LoginPage";
 import RegisterPage from "./pages/registerpage/RegisterPage";
@@ -23,6 +24,7 @@ const Routes = () => {
           <SideBarMenu />
           <Route path="/home" exact component={Home}></Route>
           <Route path="/job" exact component={AddJobFormPage}/>
+          <Route path="/job/:id" component={JobPage}/>
         </>
       </Switch>
     </Router>

@@ -44,6 +44,8 @@ public class UserDetailsModel {
     @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
     private SubscriptionModel subscriptionModel;
 
+
+
     public UserDetailsModel() {
     }
 
