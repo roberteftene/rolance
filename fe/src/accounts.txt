@@ -1,0 +1,11 @@
+User Employees:
+
+johndoe / johndoe
+
+User Employer: 
+
+joannedoe / joannedoe
+-> joburi:
+    - dezv soft -> web dez
+    - constructie computer -> it hardware
+    - paznic

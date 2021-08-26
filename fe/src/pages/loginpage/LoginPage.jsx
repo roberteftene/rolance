@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import SignInHero from "../../_assets/_img/signinHero.png";
+import SignInHero from "../../_assets/_img/Mobile-login.png";
 import "./LoginPage.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -43,7 +43,7 @@ function LoginPage() {
           Un loc de unde poti angaja usor profesionisti care sa se ocupe de nevoile tale sau de unde iti poti duce cariera ta profesionala la nivelul următor.
           </p>
           <div className="img-container">
-            <img src={SignInHero} alt="Graphic image" />
+            <img style={{width:"70%",marginTop:"70px"}} src={SignInHero} alt="Graphic image" />
           </div>
         </div>
       </Col>

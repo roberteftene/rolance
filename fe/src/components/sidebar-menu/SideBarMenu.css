@@ -54,7 +54,7 @@
     ul
     .pro-inner-item
     .pro-icon-wrapper {
-    background-color: #4d97c2de;
+    background-color: #4dc29bde;
     color: #000;
     border-radius: 3px;
   }
@@ -68,7 +68,7 @@
     color: #000;
   }
   #header .pro-sidebar-inner .pro-sidebar-layout .active {
-    background-color: #115278;
+    background-color: #0c5812;
   }
   
   #header .pro-sidebar-inner .pro-sidebar-layout .active .pro-item-content a {
@@ -84,7 +84,7 @@
   }
   
   .pro-sidebar .pro-menu a:hover {
-    color: #115278;
+    color: #0c5812;
   }
   
   @media only screen and (max-width: 720px) {

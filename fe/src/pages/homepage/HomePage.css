@@ -9,7 +9,7 @@ background-dark: #115278
   }
   
   .container-homepage-big {
-    background-color: #11527836;
+    background-color: #58926a36;
     min-height: 100vh;
   }
   
@@ -19,7 +19,7 @@ background-dark: #115278
   
   .homepage-search-title {
     font-size: 32px;
-    color: rgb(17, 82, 120);
+    color: #0c5812;
     font-weight: 400;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,

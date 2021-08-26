@@ -29,6 +29,12 @@ public class JobService {
         jobRepository.save(jobModel);
     }
 
+    public void deleteJob(Integer jobId) {
+        JobModel jobModel = jobRepository.getById(jobId);
+        jobModel.setUserAccount(null);
+        jobRepository.delete(jobModel);
+    }
+
     //Todo: Filters jobs by city, category, price, skill uri
     public boolean checkSkills(JobModel jobModel, String skillsDesired) {
         String[] skillsRequested = skillsDesired.split(",");
@@ -50,6 +56,10 @@ public class JobService {
         }
 
         return jobLocations;
+    }
+
+    public List<JobModel> getJobsByUserId(Long userID) {
+        return jobRepository.findAll().stream().filter(job -> job.getUserAccount().getId().equals(userID)).collect(Collectors.toList());
     }
 
     public List<JobModel> getFilteredJobs(FilterRequestPayload filterRequestPayload) {

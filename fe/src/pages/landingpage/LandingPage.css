@@ -5,7 +5,7 @@ dark-grey: #242526
 
 /* NAVBAR */
 .navbar {
-    background-color: rgb(17, 82, 120);
+    background-color: #0c5812;
   }
   
   .navbar-light .navbar-brand {
@@ -62,7 +62,7 @@ dark-grey: #242526
   }
   
   .header-heading {
-    color: #115278;
+    color: #0c5812;
     font-weight: 700;
     font-size: 50px;
     text-transform: uppercase;
@@ -101,7 +101,7 @@ dark-grey: #242526
   /* SECOND SECTION */
   
   #second-section {
-    background-color: #115278;
+    background-color: #0c5812;
     width: 100%;
   }
   
@@ -121,7 +121,7 @@ dark-grey: #242526
   }
   
   .btn-expore-second {
-    color: #115278 !important;
+    color: #0c5812 !important;
     font-weight: bold;
     margin-top: 5%;
   }
@@ -146,7 +146,7 @@ dark-grey: #242526
   
   .third-heading {
     font-size: 60px;
-    color: #115278;
+    color: #0c5812;
   }
   
   .third-row {
@@ -166,7 +166,7 @@ dark-grey: #242526
   /* SECTION FOUR */
   
   #section-four {
-    background-color: #115278;
+    background-color: #0c5812;
   }
   
   .fourth-details-col {
@@ -206,7 +206,7 @@ dark-grey: #242526
   /* FOOTER */
   
   footer {
-    background-color: #115278;
+    background-color: #0c5812;
   }
   
   .footer-container {

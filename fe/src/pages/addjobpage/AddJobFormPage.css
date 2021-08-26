@@ -1,5 +1,5 @@
 .review-form-container {
-    background-color: #5ea6cf1c;
+    background-color: #58926a36;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -7,7 +7,7 @@
   }
   
   .form-body {
-    background-color: #6c8c9e1c;
+    background-color: #58926a36;
     width: 40%;
     margin-top: 2%;
     box-shadow: 0 0.5125rem 0.5125rem 0 rgb(36 37 38 / 30%);
@@ -35,7 +35,7 @@
   .form-header-thanks-block {
     margin-top: 5%;
     font-size: 14px;
-    color: #115278;
+    color: #123a1fe0;
   }
   
   .form-content {

@@ -59,4 +59,13 @@ public class JobController {
         return jobUserBridgeService.getJobsApplied(userId);
     }
 
+    @GetMapping("/findOwnerJobs/{userId}")
+    public List<JobModel> getUserJobs(@PathVariable(value = "userId") Long userId) {
+        return jobService.getJobsByUserId(userId);
+    }
+
+    @DeleteMapping("/closeJob/{jobId}")
+    public void closeJob(@PathVariable(value = "jobId") Integer jobId) {
+        jobService.deleteJob(jobId);
+    }
 }

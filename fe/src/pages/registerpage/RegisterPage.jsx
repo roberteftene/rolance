@@ -1,7 +1,7 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import SignUpHero from "../../_assets/_img/signupHero.png";
+import SignUpHero from "../../_assets/_img/Mobile-login.png";
 import Form from "react-bootstrap/Form";
 import "./RegisterPage.css";
 import React, { useState } from "react";
@@ -63,7 +63,7 @@ function RegisterPage() {
             nivelul următor.
           </p>
           <div className="img-container">
-            <img src={SignUpHero} alt="Graphic image" />
+            <img style={{width:"70%",marginTop:"70px"}}  src={SignUpHero} alt="Graphic image" />
           </div>
         </div>
       </Col>

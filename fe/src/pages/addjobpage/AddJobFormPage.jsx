@@ -162,7 +162,41 @@ function AddJobFormPage() {
               <Form.Text className="text-muted">
                 Selectati categoria corespunzatoare pentru jobul introdus
               </Form.Text>
-             \
+              <Form.Control
+                as="select"
+                controlid="subscriptionType"
+                className="categorySelect"
+                onChange={(e) => setJobCategory(e.target.value)}
+              >
+                <option value="Altceva">Altceva</option>
+                <option value="Dezvoltare Software">Dezvoltare Software</option>
+                <option value="Agricultura">Agricultura</option>
+                <option value="Constructii">Constructii</option>
+                <option value="Service">Service</option>
+                <option value="Instalatii">Instalatii</option>
+                <option value="Amenajari">Amenajari</option>
+                <option value="Protectie si paza">Protectie si paza</option>
+                <option value="Menaj/Curatenie">Menaj/Curatenie</option>
+                <option value="Imobiliare">Imobiliare</option>
+                <option value="Logistica">Logistica</option>
+                <option value="Audit">Audit</option>
+                <option value="Financiar/Contabilitate">
+                  Financiar/Contabilitate
+                </option>
+                <option value="T Hardware">IT Hardware</option>
+                <option value="Suport IT">Suport IT</option>
+                <option value="Web Design">Web Design</option>
+                <option value="Telecomunicatii">Telecomunicatii</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Copyrighting">Copyrighting</option>
+                <option value="Promoter">Promoter</option>
+                <option value="Managment">Managment</option>
+                <option value="Publicitate">Publicitate</option>
+                <option value="Juridic">Juridic</option>
+                <option value="Traduceri">Traduceri</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Educatie">Educatie</option>
+              </Form.Control>
             </Form.Group>
           </Form>
         </div>

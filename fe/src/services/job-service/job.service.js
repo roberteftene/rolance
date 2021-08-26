@@ -38,6 +38,14 @@ class JobService {
   getJobsApplied(userId) {
     return axios.get(`${API_URL}job/jobsApplied/${userId}`);
   }
+
+  getUserJobs(userId) {
+    return axios.get(`${API_URL}job/findOwnerJobs/${userId}`)
+  }
+
+  closeJob(jobId) {
+    return axios.delete(`${API_URL}job/closeJob/${jobId}`)
+  }
 }
 
 export default new JobService();

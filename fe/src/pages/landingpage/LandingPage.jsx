@@ -241,7 +241,7 @@ const LandingPage = (props) => {
         <Container className="footer-container">
           <Row>
             <Col>
-              <p className="footer-logo">HubExp</p>
+              <p className="footer-logo">WorkAcer</p>
             </Col>
             <Col>
               <div className="footer-menu">

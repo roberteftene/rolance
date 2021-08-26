@@ -3,18 +3,18 @@ span.MuiRating-root.MuiRating-readOnly {
   }
   
   .searched-card {
-    background: rgb(23, 102, 149);
+    background: rgb(55, 155, 105);
     background: linear-gradient(
-      90deg,
-      rgba(23, 102, 149, 1) 48%,
-      rgba(36, 132, 187, 1) 48%
+      135deg,
+      rgb(18, 119, 52) 48%,
+      rgb(111, 194, 139) 48%
     );
   
     color: #fff;
     margin-top: 40px;
     margin-bottom: 20px;
     margin-right: 5px !important;
-    box-shadow: 0 0.9125rem 0.9125rem 0 rgb(17 82 120 / 30%);
+    box-shadow: 0 0.2125rem 0.2125rem 0 rgb(55, 155, 105);
   }
   
   .searched-card .card-link {

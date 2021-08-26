@@ -7,7 +7,7 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    background-color: #115278;
+    background-color: #246639cb;
     padding: 2%;
   }
   
@@ -64,7 +64,7 @@
   
   .details-form-headThree {
     margin-bottom: 10%;
-    color: rgb(17, 82, 120);
+    color: #246639cb;
     margin-top: 10%;
     font-weight: bold;
   }

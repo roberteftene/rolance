@@ -18,7 +18,7 @@ export default class JobCard extends Component {
               Categorie job - {this.props.job.categorie}
             </p>
           </Card.Subtitle>
-          <Card.Text>
+          <Card.Text style={{display:"flex",flexDirection:"column",alignItems:"start"}}>
             <span>
             Descriere - {this.props.job.jobDescription}
             </span>

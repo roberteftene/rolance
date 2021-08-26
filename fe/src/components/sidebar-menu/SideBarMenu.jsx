@@ -46,7 +46,7 @@ const SideBarMenu = () => {
         <ProSidebar>
           <SidebarHeader>
             <div className="logotext">
-              <p>HubExp</p>
+              <p>WorkAcer</p>
             </div>
           </SidebarHeader>
           <SidebarContent>
@@ -55,7 +55,7 @@ const SideBarMenu = () => {
                 className={locationHref === "/home" ? "active" : ""}
                 icon={<FiHome />}
               >
-                <a href="/home">Home</a>
+                <a href="/home">Acasa</a>
               </MenuItem>
 
               {currLoggedUser !== null && (
@@ -64,7 +64,7 @@ const SideBarMenu = () => {
                     className={locationHref === "/profile" ? "active" : ""}
                     icon={<BsPerson />}
                   >
-                    <a href="/profile">Profile</a>
+                    <a href="/profile">Profilul meu</a>
                   </MenuItem>
                 </>
               )}
@@ -79,20 +79,6 @@ const SideBarMenu = () => {
                   </MenuItem>
                 </>
               )}
-
-              {isEmployee === true && (
-                <>
-                  <MenuItem
-                    className={
-                      locationHref === "/employee-bookings" ? "active" : ""
-                    }
-                    icon={<MdBusinessCenter />}
-                  >
-                    <a href="/employee-bookings">BookingsManager</a>
-                  </MenuItem>
-                </>
-              )}
-
               <MenuItem icon={<BsMoon />}>Dark mode</MenuItem>
             </Menu>
           </SidebarContent>

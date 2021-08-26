@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import abstractBanner from "../../_assets/_img/aaron-burden-qJrg0ANseFE-unsplash.jpg";
+import abstractBanner from "../../_assets/_img/bigbanner2.jpeg";
 import Form from "react-bootstrap/Form";
 import { FaRocket } from "react-icons/fa";
 import AuthService from "../../services/auth/auth.service";
